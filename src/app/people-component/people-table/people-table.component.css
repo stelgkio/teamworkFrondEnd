@@ -1,0 +1,33 @@
+.page{
+  padding: 20px 10px 0;
+  background: #fafafa;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+
+table{
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 5px 5px -3px rgba(0,0,0,.2),
+              0 8px 10px 1px rgba(0,0,0,.14),
+              0 3px 14px 2px rgba(0,0,0,.12);
+
+}
+
+.mat-sort-header-container {
+  align-items: center;
+}
+
+table td,table th{
+  height: 48px;
+  line-height: 48px;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+  text-align: left
+}
+
+table td:first-child,table th:first-child{
+    padding-left: 24px;
+}
+
+.control{
+  cursor: pointer;
+}
