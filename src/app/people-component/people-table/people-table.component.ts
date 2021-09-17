@@ -105,9 +105,11 @@ export class PeopleTableComponent extends DynamicComponentHelper implements Afte
         this.dialogManager.openBadRequestDialog("Invalid data planetUrl");
         return;
       }
-      this.getPlanetName(data)
+      this.getPlanetName(data);
+
 
     });
+
   }
 
   findId(url: string): string {
@@ -115,7 +117,7 @@ export class PeopleTableComponent extends DynamicComponentHelper implements Afte
     return myArr[myArr.length - 2]
   }
   getPlanetName(data: PeopleData) {
-    this.webApiService.getPlanetById(this.findId(data.planetUrl)).subscribe(
+    this.webApiService.getPlanetById(this.findId(data.planetUrl)).toPromise().then(
       (result: PlanetData) => {
         if (result) {
           data.planetname = result.name;
@@ -131,10 +133,11 @@ export class PeopleTableComponent extends DynamicComponentHelper implements Afte
         this.dialogManager.openBadRequestDialog(error);
         return;
       });
+
   }
   openmodal(row: PeopleData) {
-    this.store.dispatch(new TeamWorkAction.GetPlanetAction(this.findId(row.planetUrl)))
 
+    this.store.dispatch(new TeamWorkAction.GetPlanetAction(this.findId(row.planetUrl)));
   }
 
 
