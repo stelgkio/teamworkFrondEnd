@@ -39,16 +39,16 @@ export class TeamWorkEffect {
  @Effect()
  getPlanetById$: Observable<Action> = this.action$.pipe(
    ofType<teamWorkAction.GetPlanetAction>(
-    teamWorkAction.TeamWorkActionType.GET_PLANETS_BYID
+    teamWorkAction.TeamWorkActionType.GET_PLANET_BYID
    ),
    map((action: teamWorkAction.GetPlanetAction) => action.payload),
    mergeMap((id:string) =>
      this.webApiService.getPlanetById(id).pipe(
        map(
          (newoninit: HomeWorld) =>
-           ({ type: teamWorkAction.TeamWorkActionType.GET_PLANETS_BYID_SUCCESS, payload: newoninit })
+           ({ type: teamWorkAction.TeamWorkActionType.GET_PLANET_BYID_SUCCESS, payload: newoninit })
        ),
-       catchError(err => of({ type: teamWorkAction.TeamWorkActionType.GET_PLANETS_BYID_FAIL, payload: err }))
+       catchError(err => of({ type: teamWorkAction.TeamWorkActionType.GET_PLANET_BYID_FAIL, payload: err }))
      )
 
    )
