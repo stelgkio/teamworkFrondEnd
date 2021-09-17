@@ -60,14 +60,14 @@ export class PeopleTableComponent extends DynamicComponentHelper implements Afte
 
     const GetPlanetSuccess: Subscription = this.action$.pipe(
       ofType<GetPlanetActionSuccess>(
-        TeamWorkActionType.GET_PLANETS_BYID_SUCCESS
+        TeamWorkActionType.GET_PLANET_BYID_SUCCESS
       )).subscribe(req => {
         this.handlerGetPlanetSuccess(req.payload);
       });
 
     const GetPlanetFail: Subscription = this.action$.pipe(
       ofType<GetPlanetActionFail>(
-        TeamWorkActionType.GET_PLANETS_BYID_FAIL
+        TeamWorkActionType.GET_PLANET_BYID_FAIL
       )).subscribe(() => {
         this.handlerGetPlanetFail();
       });

@@ -50,7 +50,6 @@ export class TeamWorkEffect {
        ),
        catchError(err => of({ type: teamWorkAction.TeamWorkActionType.GET_PLANET_BYID_FAIL, payload: err }))
      )
-
    )
  );
 

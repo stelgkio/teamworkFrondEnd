@@ -41,10 +41,10 @@ export function teamWorkReducer(state = initialState, action: teamWorkAction.Tea
         error: action.payload
       };
     }
-    case teamWorkAction.TeamWorkActionType.GET_PLANETS_BYID_SUCCESS: {
+    case teamWorkAction.TeamWorkActionType.GET_PLANET_BYID_SUCCESS: {
       return TeamWorkAdapter.addOne(action.payload, state);
     }
-    case teamWorkAction.TeamWorkActionType.GET_PLANETS_BYID_FAIL: {
+    case teamWorkAction.TeamWorkActionType.GET_PLANET_BYID_FAIL: {
 
       return {
         ...state,
