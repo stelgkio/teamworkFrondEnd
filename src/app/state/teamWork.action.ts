@@ -5,9 +5,9 @@ export enum TeamWorkActionType {
   GET_ALL_PEOPLE_SUCCESS = 'GET_ALL_PEOPLE_SUCCESS',
   GET_ALL_PEOPLE_FAIL = 'GET_ALL_PEOPLE_FAIL',
 
-  GET_PLANETS_BYID = 'GET_PLANETS_BYID',
-  GET_PLANETS_BYID_SUCCESS = 'GET_PLANETS_BYID_SUCCESS',
-  GET_PLANETS_BYID_FAIL = 'GET_PLANETS_BYID_FAIL',
+  GET_PLANET_BYID = 'GET_PLANET_BYID',
+  GET_PLANET_BYID_SUCCESS = 'GET_PLANET_BYID_SUCCESS',
+  GET_PLANET_BYID_FAIL = 'GET_PLANET_BYID_FAIL',
 }
 
 
@@ -33,19 +33,19 @@ export class GetAllPeoplesActionFail implements Action {
 
 
 export class GetPlanetAction implements Action {
-  readonly type = TeamWorkActionType.GET_PLANETS_BYID;
+  readonly type = TeamWorkActionType.GET_PLANET_BYID;
 
   constructor(public payload: any) { }
 }
 
 export class GetPlanetActionSuccess implements Action {
-  readonly type = TeamWorkActionType.GET_PLANETS_BYID_SUCCESS;
+  readonly type = TeamWorkActionType.GET_PLANET_BYID_SUCCESS;
 
   constructor(public payload: any) { }
 
 }
 export class GetPlanetActionFail implements Action {
-  readonly type = TeamWorkActionType.GET_PLANETS_BYID_FAIL;
+  readonly type = TeamWorkActionType.GET_PLANET_BYID_FAIL;
 
   constructor(public payload: any) { }
 }
