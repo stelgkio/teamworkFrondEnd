@@ -7,7 +7,6 @@ import * as teamWorkAction from './teamWork.action';
 import { mergeMap, map, catchError } from 'rxjs/operators';
 import { WebApiService } from "../services/WebApiService";
 import { PeopleList } from "../models/PeopleResponse";
-import * as fromteamWork from '../state/teamWork.action'
 @Injectable()
 export class TeamWorkEffect {
 
